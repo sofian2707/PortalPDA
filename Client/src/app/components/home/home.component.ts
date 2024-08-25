@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { Route } from '@angular/router';
+import { Route, RouterModule } from '@angular/router';
 import *as bootstrap from 'bootstrap';
-
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [],
+  imports: [RouterModule, RouterLink],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })

@@ -1,9 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
+import { AlojamientoComponent } from './components/alojamiento/alojamiento.component';
+import { AtraccionesComponent } from './components/atracciones/atracciones.component';
+import { RestaurantComponent } from './components/restaurant/restaurant.component';
 
 export const routes: Routes = [
-    { path: '', component: HomeComponent }, // Ruta para el componente Home
+    { path: '', component: HomeComponent },
+    { path: 'alojamiento', component: AlojamientoComponent},
+    { path: 'atracciones', component: AtraccionesComponent}, // Ruta para el componente Home
+    { path: 'restaurant', component: RestaurantComponent} 
     // Otras rutas aquí
 ];
 

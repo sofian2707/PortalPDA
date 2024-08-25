@@ -1,119 +1,115 @@
-
-
 <!-- Banner Section -->
 <section class="banner text-center text-white d-flex align-items-center justify-content-center">
-    <div class="container">
-      <h1 class="display-4">Bienvenido a Piedra del Aguila</h1>
-      <p class="lead">Explora lo mejor de [Piedra del Águila]</p>
-      <a href="#" class="btn btn-primary btn-lg mt-4">Descubre más</a>
-    </div>
-  </section>
-  
-  <section id="services" class="services py-5">
-    <div class="container">
-      <div class="row text-center mb-4">
-        <div class="col">
-          <h2 class="section-title">Explore Our Services</h2>
-          <p class="section-subtitle">Discover the best places to visit, stay, and eat in Piedra del Águila.</p>
-        </div>
-      </div>
-      <div class="row">
-        <!-- Card 1: Lugar Turístico -->
-        <div class="col-md-4 mb-4">
-          <div class="card text-white h-100">
-            <img src="https://via.placeholder.com/400x250" class="card-img" alt="Lugar Turístico">
-            <div class="card-img-overlay d-flex flex-column justify-content-center">
-              <h5 class="card-title text-center">Lugar Turístico</h5>
-              <p class="card-text text-center">Explora las maravillas naturales y los puntos de interés que ofrece Piedra del Águila.</p>
-            </div>
-          </div>
-        </div>
-        <!-- Card 2: Alojamiento -->
-        <div class="col-md-4 mb-4">
-          <div class="card text-white h-100">
-            <img src="https://via.placeholder.com/400x250" class="card-img" alt="Alojamiento">
-            <div class="card-img-overlay d-flex flex-column justify-content-center">
-              <h5 class="card-title text-center">Alojamientos</h5>
-              <p class="card-text text-center">Encuentra los mejores lugares para hospedarte durante tu visita.</p>
-            </div>
-          </div>
-        </div>
-        <!-- Card 3: Restaurante -->
-        <div class="col-md-4 mb-4">
-          <div class="card text-white h-100">
-            <img src="https://via.placeholder.com/400x250" class="card-img" alt="Restaurante">
-            <div class="card-img-overlay d-flex flex-column justify-content-center">
-              <h5 class="card-title text-center">Restaurantes</h5>
-              <p class="card-text text-center">Disfruta de la gastronomía local en los mejores restaurantes.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-
-  
-  
-  <!-- Events Section -->
-<section class="events py-5 bg-light">
-    <div class="container">
-      <div class="row">
-        <!-- Description on the Left -->
-        <div class="col-md-6">
-          <h2 class="mb-4">Próximos Eventos</h2>
-          <p>Te invitamos a participar de los siguientes eventos en Piedra del Águila. Descúbrelos y no te pierdas la oportunidad de disfrutar de nuestras actividades locales.</p>
-          <a href="#events" class="btn btn-primary">Ver Todos los Eventos</a>
-        </div>
-        <!-- Carousel on the Right -->
-        <div class="col-md-6">
-          <div id="eventsCarousel" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <a href="#events">
-                  <img src="https://via.placeholder.com/300x200" class="d-block w-100" alt="Evento 1">
-                  <div class="carousel-caption d-none d-md-block">
-                    <h5>Festival Cultural</h5>
-                  </div>
-                </a>
-              </div>
-              <div class="carousel-item">
-                <a href="#events">
-                  <img src="https://via.placeholder.com/300x200" class="d-block w-100" alt="Evento 2">
-                  <div class="carousel-caption d-none d-md-block">
-                    <h5>Concierto en el Parque</h5>
-                  </div>
-                </a>
-              </div>
-              <!-- Añadir más eventos aquí -->
-            </div>
-            <a class="carousel-control-prev" href="#eventsCarousel" role="button" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#eventsCarousel" role="button" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
+  <div class="container">
+    <h1 class="display-4">Bienvenido a Piedra del Aguila</h1>
+    <p class="lead">Explora la belleza natural y la riqueza histórica de nuestro rincón patagónico.</p>
+    <a href="#" class="btn btn-light btn-lg mt-4">Descubre más</a>
+  </div>
 </section>
 
 
 
-  <!-- Sticky Footer Ad -->
-<div class="sticky-footer">
-    <p>Publicidad Local: Apoya a los negocios de Piedra del Águila</p>
-  </div>
-  
-  
-  <!-- Footer Section -->
-  <footer class="bg-dark text-white py-4">
-    <div class="container text-center">
-      <p class="mb-0">[Tu App] &copy; 2024. Todos los derechos reservados.</p>
-      <p class="mb-0">Contacto: inf.com | Tel: 123-456-7890</p>
+<section id="services" class="services py-5">
+  <div class="container">
+    <div class="row text-center mb-4">
+      <div class="col">
+        <h2 class="section-title">Descubre lo Mejor de Piedra del Águila</h2>
+        <p class="section-subtitle">Desde los paisajes impresionantes hasta la cálida hospitalidad, te invitamos a explorar todo lo que esta maravillosa localidad tiene para ofrecer.</p>
+      </div>
     </div>
-  </footer>
-  
+    <div class="row">
+      <!-- Card 1: Lugar Turístico -->
+      <div class="col-md-4 mb-4">
+          <div class="card text-white h-100" routerLink="/atracciones">
+            <img src="https://i.postimg.cc/7hfbMkBk/place2.jpg" class="card-img" alt="Lugar Turístico">
+            <div class="card-img-overlay d-flex flex-column justify-content-center">
+              <h5 class="card-title text-center" >Lugar Turístico</h5>
+              <p class="card-text text-center">Explora las maravillas naturales y los puntos de interés que ofrece Piedra del Águila.</p>
+            </div>
+          </div> 
+      </div>
+      
+      <!-- Card 2: Alojamiento -->
+       
+      <div class="col-md-4 mb-4">
+        <div class="card text-white h-100" routerLink='/alojamiento'>
+          <img src="https://i.postimg.cc/Hk1FbtxZ/3c7932ac3bfa39b58e1a3f833c652faf.jpg" class="card-img" alt="Alojamiento">
+          <div class="card-img-overlay d-flex flex-column justify-content-center">
+            <h5 class="card-title text-center">Alojamientos</h5>
+            <p class="card-text text-center">Encuentra los mejores lugares para hospedarte durante tu visita.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Card 3: Restaurante -->
+      <div class="col-md-4 mb-4">
+        <div class="card text-white h-100" routerLink="/restaurant">
+          <img src="https://i.postimg.cc/gJGZh1Fz/598ab634b29e8ac821bcce7b10201ceb.jpg" class="card-img" alt="Restaurante">
+          <div class="card-img-overlay d-flex flex-column justify-content-center">
+            <h5 class="card-title text-center">Restaurantes</h5>
+            <p class="card-text text-center">Disfruta de la gastronomía local en los mejores restaurantes.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- Events Section -->
+<section class="events py-5 bg-light">
+  <div class="container">
+    <div class="row">
+      <!-- Description on the Left -->
+      <div class="col-md-6">
+        <h2 class="mb-4">Próximos Eventos</h2>
+        <p>Te invitamos a participar de los siguientes eventos en Piedra del Águila. Descúbrelos y no te pierdas la oportunidad de disfrutar de nuestras actividades locales.</p>
+        <a href="#events" class="btn btn-primary">Ver Todos los Eventos</a>
+      </div>
+      <!-- Carousel on the Right -->
+      <div class="col-md-6">
+        <div id="eventsCarousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <a href="#events">
+                <img src="https://i.postimg.cc/d11JzczS/301995594-399444169014504-378650303075720343-n.jpg" class="d-block w-100" alt="Evento 1">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Rally Neuquino</h5>
+                </div>
+              </a>
+            </div>
+            <div class="carousel-item">
+              <a href="#events">
+                <img src="https://via.placeholder.com/300x200" class="d-block w-100" alt="Evento 2">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Concierto en el Parque</h5>
+                </div>
+              </a>
+            </div>
+            <!-- Añadir más eventos aquí -->
+          </div>
+          <a class="carousel-control-prev" href="#eventsCarousel" role="button" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#eventsCarousel" role="button" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Footer Section -->
+<footer class="bg-dark text-white py-4">
+  <div class="container text-center">
+    <p class="mb-0">[Tu App] &copy; 2024. Todos los derechos reservados.</p>
+    <p class="mb-0">Contacto: inf.com | Tel: 123-456-7890</p>
+  </div>
+</footer>
+

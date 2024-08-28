@@ -7,9 +7,10 @@ import { RestaurantComponent } from './components/restaurant/restaurant.componen
 
 export const routes: Routes = [
     { path: '', component: HomeComponent },
-    { path: 'alojamiento', component: AlojamientoComponent},
+    { path: 'home', component: HomeComponent },
+    { path: 'alojamientos', component: AlojamientoComponent},
     { path: 'atracciones', component: AtraccionesComponent}, // Ruta para el componente Home
-    { path: 'restaurant', component: RestaurantComponent} 
+    { path: 'restaurantes', component: RestaurantComponent} 
     // Otras rutas aquí
 ];
 

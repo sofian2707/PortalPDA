@@ -1,9 +1,43 @@
+
+<body><!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <img src="https://i.postimg.cc/3RsQNJVr/removal-ai-b1447e86-8ecf-4080-862d-9347a4c8824e-piedra-del-aguila.png" alt="Logo" class="navbar-logo">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/home">INICIO</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/atracciones">DONDE IR</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/restaurantes">DONDE COMER</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/alojamientos">DONDE DORMIR</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/alojamientos">NOTICIAS</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
 <!-- Banner Section -->
 <section class="banner text-center text-white d-flex align-items-center justify-content-center">
+  
   <div class="container">
     <h1 class="display-4">Bienvenido a Piedra del Aguila</h1>
     <p class="lead">Explora la belleza natural y la riqueza histórica de nuestro rincón patagónico.</p>
-    <a href="#" class="btn btn-light btn-lg mt-4">Descubre más</a>
+    <a routerLink="/atracciones" class="btn btn-light btn-lg mt-4">Descubre más</a>
   </div>
 </section>
 
@@ -20,11 +54,11 @@
     <div class="row">
       <!-- Card 1: Lugar Turístico -->
       <div class="col-md-4 mb-4">
-          <div class="card text-white h-100" routerLink="/atracciones">
+          <div class="card text-white" routerLink="/atracciones">
             <img src="https://i.postimg.cc/7hfbMkBk/place2.jpg" class="card-img" alt="Lugar Turístico">
             <div class="card-img-overlay d-flex flex-column justify-content-center">
-              <h5 class="card-title text-center" >Lugar Turístico</h5>
-              <p class="card-text text-center">Explora las maravillas naturales y los puntos de interés que ofrece Piedra del Águila.</p>
+              <h5 class="card-title text-center" >Puntos de Interés</h5>
+              <p class="card-text text-center">Explora la belleza natural de lagos y montañas en Piedra del Águila, un lugar ideal para la aventura y la relajación.</p>
             </div>
           </div> 
       </div>
@@ -32,7 +66,7 @@
       <!-- Card 2: Alojamiento -->
        
       <div class="col-md-4 mb-4">
-        <div class="card text-white h-100" routerLink='/alojamiento'>
+        <div class="card text-white" routerLink='/alojamientos'>
           <img src="https://i.postimg.cc/Hk1FbtxZ/3c7932ac3bfa39b58e1a3f833c652faf.jpg" class="card-img" alt="Alojamiento">
           <div class="card-img-overlay d-flex flex-column justify-content-center">
             <h5 class="card-title text-center">Alojamientos</h5>
@@ -42,8 +76,8 @@
       </div>
       <!-- Card 3: Restaurante -->
       <div class="col-md-4 mb-4">
-        <div class="card text-white h-100" routerLink="/restaurant">
-          <img src="https://i.postimg.cc/gJGZh1Fz/598ab634b29e8ac821bcce7b10201ceb.jpg" class="card-img" alt="Restaurante">
+        <div class="card text-white" routerLink="/restaurantes">
+          <img src="https://i.pinimg.com/564x/e7/1c/8e/e71c8ed41126ddb6f6d5308d5f4d1d51.jpg" class="card-img" alt="Restaurante">
           <div class="card-img-overlay d-flex flex-column justify-content-center">
             <h5 class="card-title text-center">Restaurantes</h5>
             <p class="card-text text-center">Disfruta de la gastronomía local en los mejores restaurantes.</p>
@@ -56,34 +90,24 @@
 
 
 
-
-<!-- Events Section -->
-<section class="events py-5 bg-light">
-  <div class="container">
+<section class="events py-5">
+  <div class="Event container">
     <div class="row">
       <!-- Description on the Left -->
       <div class="col-md-6">
-        <h2 class="mb-4">Próximos Eventos</h2>
+        <h2 class="title mb-4">Próximos Eventos</h2>
         <p>Te invitamos a participar de los siguientes eventos en Piedra del Águila. Descúbrelos y no te pierdas la oportunidad de disfrutar de nuestras actividades locales.</p>
-        <a href="#events" class="btn btn-primary">Ver Todos los Eventos</a>
       </div>
       <!-- Carousel on the Right -->
       <div class="col-md-6">
         <div id="eventsCarousel" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-inner">
-            <div class="carousel-item active">
+            <div class="carousel-item active position-relative">
               <a href="#events">
                 <img src="https://i.postimg.cc/d11JzczS/301995594-399444169014504-378650303075720343-n.jpg" class="d-block w-100" alt="Evento 1">
-                <div class="carousel-caption d-none d-md-block">
+                <div class="event-date">20, 21 y 22 de Sep</div> <!-- Fecha del evento -->
+                <div class="carousel-caption">
                   <h5>Rally Neuquino</h5>
-                </div>
-              </a>
-            </div>
-            <div class="carousel-item">
-              <a href="#events">
-                <img src="https://via.placeholder.com/300x200" class="d-block w-100" alt="Evento 2">
-                <div class="carousel-caption d-none d-md-block">
-                  <h5>Concierto en el Parque</h5>
                 </div>
               </a>
             </div>
@@ -105,11 +129,136 @@
 
 
 
+<section class="destinos-destacados py-5">
+  <div class="galery container">
+    <h2 class="text-left mb-2">Destinos Destacados</h2>
+    <p class="text-left mb-4">Explora los destinos más populares y descubre las maravillas que te esperan.</p>
+    <div class="row">
+      <!-- Imagen 1 -->
+      <div class="col-md-3 mb-4">
+        <div class="image-container">
+          <img src="https://via.placeholder.com/320x220" class="img-fluid" alt="Destino 1">
+          <div class="overlay">
+            <h5>Destino 1</h5>
+          </div>
+        </div>
+      </div>
+      <!-- Imagen 2 -->
+      <div class="col-md-3 mb-4">
+        <div class="image-container">
+          <img src="https://via.placeholder.com/320x220" class="img-fluid" alt="Destino 2">
+          <div class="overlay">
+            <h5>Destino 2</h5>
+          </div>
+        </div>
+      </div>
+      <!-- Imagen 3 -->
+      <div class="col-md-3 mb-4">
+        <div class="image-container">
+          <img src="https://via.placeholder.com/320x220" class="img-fluid" alt="Destino 3">
+          <div class="overlay">
+            <h5>Destino 3</h5>
+          </div>
+        </div>
+      </div>
+      <!-- Imagen 4 -->
+      <div class="col-md-3 mb-4">
+        <div class="image-container">
+          <img src="https://via.placeholder.com/320x220" class="img-fluid" alt="Destino 4">
+          <div class="overlay">
+            <h5>Destino 4</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Publicidad  -->
+<section class="publicity-container">
+  <div class="publicity-track">
+    <div class="publicity-item">
+      <img src="https://i.postimg.cc/3J3nTMSs/LOGO-SIN-FONDO.png" alt="Publicidad 1" class="publicity-img">
+    </div>
+    <div class="publicity-item">
+      <img src="https://i.postimg.cc/3J3nTMSs/LOGO-SIN-FONDO.png" alt="Publicidad 2" class="publicity-img">
+    </div>
+    <div class="publicity-item">
+      <img src="https://i.pinimg.com/736x/4d/12/d3/4d12d35f142947da36d79ff26fee7918.jpg" alt="Publicidad 3" class="publicity-img">
+    </div>
+    <div class="publicity-item">
+      <img src="https://i.pinimg.com/564x/bb/c3/87/bbc3876fcf4b6bc6efae98322a866677.jpg" alt="Publicidad 4" class="publicity-img">
+    </div>
+    <div class="publicity-item">
+      <img src="https://i.pinimg.com/564x/ab/fd/b5/abfdb5401c83ab54941bc454a04652e6.jpg" alt="Publicidad 1" class="publicity-img">
+    </div>
+    <div class="publicity-item">
+      <img src="https://i.pinimg.com/564x/25/d1/58/25d1589fd8e6f4b742f56ba64263a1d7.jpg" alt="Publicidad 2" class="publicity-img">
+    </div>
+    <div class="publicity-item">
+      <img src="https://i.pinimg.com/736x/4d/12/d3/4d12d35f142947da36d79ff26fee7918.jpg" alt="Publicidad 3" class="publicity-img">
+    </div>
+    <div class="publicity-item">
+      <img src="https://i.pinimg.com/564x/25/d1/58/25d1589fd8e6f4b742f56ba64263a1d7.jpg" alt="Publicidad 2" class="publicity-img">
+    </div>
+    <div class="publicity-item">
+      <img src="https://i.pinimg.com/736x/4d/12/d3/4d12d35f142947da36d79ff26fee7918.jpg" alt="Publicidad 3" class="publicity-img">
+    </div>
+    <!-- Duplicar las imágenes para el efecto de carrusel infinito -->
+    <div class="publicity-item">
+      <img src="https://i.postimg.cc/3J3nTMSs/LOGO-SIN-FONDO.png" alt="Publicidad 1" class="publicity-img">
+    </div>
+    <div class="publicity-item">
+      <img src="https://i.pinimg.com/564x/25/d1/58/25d1589fd8e6f4b742f56ba64263a1d7.jpg" alt="Publicidad 2" class="publicity-img">
+    </div>
+    <div class="publicity-item">
+      <img src="https://i.pinimg.com/736x/4d/12/d3/4d12d35f142947da36d79ff26fee7918.jpg" alt="Publicidad 3" class="publicity-img">
+    </div>
+    <div class="publicity-item">
+      <img src="https://i.pinimg.com/564x/bb/c3/87/bbc3876fcf4b6bc6efae98322a866677.jpg" alt="Publicidad 4" class="publicity-img">
+    </div>
+    <div class="publicity-item">
+      <img src="https://i.pinimg.com/564x/ab/fd/b5/abfdb5401c83ab54941bc454a04652e6.jpg" alt="Publicidad 1" class="publicity-img">
+    </div>
+    <div class="publicity-item">
+      <img src="https://i.pinimg.com/564x/25/d1/58/25d1589fd8e6f4b742f56ba64263a1d7.jpg" alt="Publicidad 2" class="publicity-img">
+    </div>
+    <div class="publicity-item">
+      <img src="https://i.pinimg.com/736x/4d/12/d3/4d12d35f142947da36d79ff26fee7918.jpg" alt="Publicidad 3" class="publicity-img">
+    </div>
+    <div class="publicity-item">
+      <img src="https://i.pinimg.com/564x/25/d1/58/25d1589fd8e6f4b742f56ba64263a1d7.jpg" alt="Publicidad 2" class="publicity-img">
+    </div>
+    <div class="publicity-item">
+      <img src="https://i.pinimg.com/736x/4d/12/d3/4d12d35f142947da36d79ff26fee7918.jpg" alt="Publicidad 3" class="publicity-img">
+    </div>
+  </div>
+</section>
+
+
+
 <!-- Footer Section -->
-<footer class="bg-dark text-white py-4">
-  <div class="container text-center">
-    <p class="mb-0">[Tu App] &copy; 2024. Todos los derechos reservados.</p>
-    <p class="mb-0">Contacto: inf.com | Tel: 123-456-7890</p>
+<footer class="foot bg-dark text-white py-4">
+  <div class="container">
+    <div class="row">
+      <!-- Columna 1: Seguinos -->
+      <div class="col-md-6 text-center text-md-start mb-4 mb-md-0">
+        <h5 class="mb-3">SEGUINOS</h5>
+        <ul class="list-unstyled">
+          <li><a href="https://www.facebook.com/munidepiedra" class="text-white">Facebook</a></li>
+          <li><a href="https://www.instagram.com/munipda/" class="text-white">Instagram</a></li>
+        </ul>
+      </div>
+      <!-- Columna 2: Contacto -->
+      <div class="col-md-6 text-center text-md-start">
+        <h5 class="mb-3">CONTACTO</h5>
+        <p class="mb-1">Municipalidad de Piedra del Aguila</p>
+        <p class="mb-1">Las Bardas 55 CP (8315)</p>
+        <p class="mb-1">Secretaría de Turismo de Piedra del Águila, (02942) 493456</p>
+      </div>
+    </div>
   </div>
 </footer>
 
+
+</body>

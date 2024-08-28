@@ -1,103 +1,441 @@
-/* Banner Styles */
+/* ===================== */
+/* Navbar Styles          */
+/* ===================== */
+
+.navbar {
+  background-color: #e9d9c107; /* Fondo translúcido */
+  transition: background-color 0.3s ease; /* Transición suave del fondo */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  position: fixed; /* Navbar fija en la parte superior */
+  top: 0;
+  left: 0;
+  width: 100%; /* Ocupa todo el ancho de la página */
+  z-index: 1000; /* Se asegura de que la navbar esté sobre otros elementos */
+}
+
+.navbar .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Espaciado entre elementos en la navbar */
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center; /* Alinea el logo con el texto */
+}
+
+.navbar-logo {
+  height: 90px; /* Altura del logo */
+  width: auto; /* Mantiene la proporción del logo */
+}
+
+.navbar a {
+  color: #ebd7b9; /* Color del texto */
+  font-weight: bolder; /* Negrita */
+  margin-left: 20px; /* Espacio entre enlaces */
+  font-style: normal;
+  font-size: 15px;
+  font-family: 'Plus Jakarta Sans'; /* Fuente del texto */
+}
+
+.navbar a:hover {
+  color: #f5f6f7; /* Color del texto al pasar el mouse */
+}
+
+/* Estilo de la navbar al hacer scroll */
+.navbar.scrolled {
+  background-color: #E9D9C1; /* Color de fondo al hacer scroll */
+}
+
+.navbar.scrolled a:hover {
+  color: #B26E25; /* Color del texto al pasar el mouse después del scroll */
+}
+
+.navbar.scrolled .navbar-logo {
+  height: 60px; /* Tamaño del logo al hacer scroll */
+}
+
+.navbar.scrolled a {
+  color: #2E1F15; /* Color del texto después del scroll */
+}
+
+/* Responsive Adjustments for Navbar */
+@media (max-width: 768px) {
+  .navbar-logo {
+    height: 50px; /* Tamaño del logo en pantallas pequeñas */
+  }
+
+
+}
+
+/* ===================== */
+/* Banner Styles          */
+/* ===================== */
+
 .banner {
-  background: url('https://i.postimg.cc/rmFpMrtj/Untitled-Project.jpg') no-repeat;
-  background-size: cover;
-  height: 80vh; /* Ajusta la altura del banner */
+  background: linear-gradient(rgba(0, 0, 0, 0.352), rgba(0, 0, 0, 0.5)), url('https://i.postimg.cc/Wb7cNS1y/copia.jpg') center no-repeat;
+  background-size: cover; /* La imagen de fondo cubre todo el banner */
+  height: 95vh; /* Altura del banner */
   color: #fff;
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-top: 100px; /* Espacio superior para ajustar debajo de la navbar */
+  font-family: 'Bw Modelica SS01', sans-serif; /* Fuente del banner */
+  background-attachment: fixed; /* Hace que la imagen del banner quede fija */
 }
 
 .banner h1 {
-  font-size: 4rem; /* Tamaño de fuente grande para el título */
+  font-size: 4rem; /* Tamaño del título en el banner */
+  font-family: 'Bw Modelica SS01', sans-serif;
 }
 
 .banner p {
-  font-size: 1.5rem; /* Tamaño de fuente grande para el texto */
+  font-size: 1.5rem; /* Tamaño del texto en el banner */
 }
 
 .banner .btn {
-  font-size: 1.25rem;
-  background: linear-gradient(45deg, #ffffff, #cccccc); /* Degradado de colores claros */
+  font-size: 1.25rem; /* Tamaño del botón */
+  background: linear-gradient(45deg, #ffffff, #cccccc); 
   border: none;
-  border-radius: 30px; /* Bordes redondeados */
+  border-radius: 30px; /* Bordes redondeados del botón */
   padding: 12px 30px;
-  color: #333; /* Cambia el texto a un color más oscuro para contraste */
+  color: #333; /* Color del texto en el botón */
   text-transform: uppercase;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Sombra */
-  transition: all 0.3s ease;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Sombra del botón */
+  transition: all 0.3s ease; /* Transición suave del botón */
+}
+/* ===================== */
+/* Service Cards Styles   */
+/* ===================== */
+
+/* ===================== */
+/* Service Cards Styles   */
+/* ===================== */
+
+.services .card {
+  transition: transform 0.3s ease; /* Transición suave en hover */
+  overflow: hidden; /* Asegura que la imagen no se salga del contenedor */
+  height: 300px; /* Altura fija para el contenedor */
+  width: 100%; /* Asegura que ocupe todo el ancho disponible */
 }
 
-/* Service Cards */
-.services .card {
-  transition: transform 0.3s ease;
+.services .card-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover; /* Ajusta la imagen al tamaño del contenedor */
+  object-position: center; /* Centra la imagen dentro del contenedor */
 }
 
 .services .card:hover {
-  transform: translateY(-10px);
+  transform: translateY(-10px); /* Efecto de elevación en hover */
 }
 
-/* Events Section Styles */
-.events .card img {
-  height: 200px;
-  object-fit: cover;
+
+/* ===================== */
+/* Section Titles         */
+/* ===================== */
+
+.section-title {
+  padding-top: 100px; /* Espacio superior para el título de la sección */
 }
 
-/* Carousel Styles */
+/* ===================== */
+/* Events Section Styles  */
+/* ===================== */
+
+/* ===================== */
+/* Events Section Styles  */
+/* ===================== */
+
+/* Imagen dentro del carrusel */
+.events .carousel-item img {
+  height: 300px; /* Ajuste de altura para mejor visualización en escritorio */
+  object-fit: cover; /* Las imágenes se ajustan dentro del contenedor */
+  width: 100%; /* Asegura que la imagen ocupe todo el ancho del contenedor */
+  border-radius: 8px; /* Añade bordes redondeados a la imagen */
+}
+
+/* Título del evento con fondo oscuro */
+.events .carousel-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(196, 15, 15, 0.6); /* Fondo oscuro semi-transparente */
+  color: white;
+  padding: 10px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  z-index: 10;
+  margin: 0;
+}
+
+/* Estilo del div para la fecha */
+.events .event-date {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: rgba(255, 0, 0, 0.558);
+  color: white;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  z-index: 11;
+  width: 150px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  margin: 0;
+}
+
+/* Responsivo para dispositivos móviles */
+@media (max-width: 768px) {
+  .events .carousel-item img {
+    height: 200px; /* Reducción de altura en pantallas pequeñas */
+  }
+
+  .events .carousel-caption {
+    font-size: 14px; /* Tamaño de fuente reducido para pantallas pequeñas */
+    padding: 8px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Fondo oscuro semi-transparente */
+    border-radius: 0; /* Eliminar bordes redondeados en pantallas pequeñas */
+    z-index: 10;
+  }
+
+  .events .event-date {
+    width: 60px; /* Reducción de tamaño en pantallas pequeñas */
+    height: 60px;
+    font-size: 12px; /* Tamaño de fuente reducido para la fecha en pantallas pequeñas */
+    border-top-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    margin: 0;
+    padding: 5px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 11;
+  }
+}
+
+
+/* ===================== */
+/* Carousel Styles        */
+/* ===================== */
+
 .carousel {
-  overflow: hidden; /* Asegura que ningún contenido salga del carrusel */
-  border-radius: 10px; /* Añade bordes redondeados al carrusel */
+  overflow: hidden; /* Oculta cualquier contenido desbordado */
+  border-radius: 10px; /* Bordes redondeados en el carrusel */
 }
 
 .carousel-item {
-  height: 300px; /* Define una altura específica para las imágenes */
+  height: 300px; /* Altura específica para las imágenes del carrusel */
 }
 
 .carousel-item img {
   height: 100%; /* La imagen ocupa toda la altura del contenedor */
-  width: 100%;  /* La imagen ocupa todo el ancho del contenedor */
-  object-fit: cover; /* Ajusta la imagen para que cubra todo el espacio sin distorsionarse */
+  width: 100%; /* La imagen ocupa todo el ancho del contenedor */
+  object-fit: cover; /* Ajusta la imagen para cubrir todo el espacio */
 }
 
-/* Card Styles */
+/* ===================== */
+/* Card Styles            */
+/* ===================== */
+
 .card {
   border: none;
   overflow: hidden;
-  border-radius: 10px;
+  border-radius: 10px; /* Bordes redondeados de las tarjetas */
 }
 
 .card-img {
-  object-fit: cover;
+  object-fit: cover; /* La imagen se ajusta dentro del contenedor */
   height: 100%;
   width: 100%;
   filter: brightness(70%); /* Oscurece la imagen para resaltar el texto */
-  transition: transform 0.3s ease, filter 0.3s ease;
+  transition: transform 0.3s ease, filter 0.3s ease; /* Transiciones suaves */
 }
 
 .card:hover .card-img {
-  transform: scale(1.05);
-  filter: brightness(50%);
+  transform: scale(1.05); /* Efecto de escala en hover */
+  filter: brightness(50%); /* Imagen más oscura en hover */
 }
 
 .card-title, .card-text {
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Sombra del texto en las tarjetas */
 }
 
-/* Footer Styles */
+/* ===================== */
+/* Footer Styles          */
+/* ===================== */
+
 footer {
-  background-color: #333;
-  color: #fff;
+  background-color: #333; /* Fondo oscuro para el footer */
+  color: #fff; /* Texto blanco en el footer */
+  font-family: 'Plus Jakarta Sans'; /* Fuente del footer */
 }
 
+footer a {
+  text-decoration: none; /* Sin subrayado en los enlaces */
+}
+
+/* ===================== */
 /* Responsive Adjustments */
+/* ===================== */
+
 @media (max-width: 768px) {
   .banner h1 {
-      font-size: 2.5rem;
+    font-size: 2.5rem; /* Tamaño del título del banner en pantallas pequeñas */
   }
 
   .banner p {
-      font-size: 1.2rem;
+    font-size: 1.2rem; /* Tamaño del texto del banner en pantallas pequeñas */
+  }
+
+  #banner {
+    padding-top: 80px; /* Ajuste de padding para pantallas pequeñas */
+    min-height: 60vh; /* Altura mínima del banner en pantallas pequeñas */
+  }
+
+  .navbar {
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo más opaco para legibilidad */
+  }
+}
+
+/* ===================== */
+/* Galería Styles         */
+/* ===================== */
+
+/* Título alineado a la izquierda */
+h2.text-left {
+  text-align: left;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+/* Descripción debajo del título */
+p.text-left {
+  text-align: left;
+  font-size: 1rem;
+  margin-bottom: 30px;
+  color: #555; /* Color gris para el texto descriptivo */
+}
+
+/* Contenedor de imágenes */
+.image-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px; /* Bordes redondeados de las imágenes */
+}
+
+/* Tamaño de las imágenes ajustado */
+.image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Overlay de texto */
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7); /* Fondo oscuro translúcido para el overlay */
+  color: white;
+  text-align: center;
+  padding: 20px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  transform: translateY(100%);
+}
+
+.image-container:hover .overlay {
+  opacity: 1; /* Overlay visible en hover */
+  transform: translateY(0); /* Movimiento del overlay en hover */
+}
+
+/* Estilo del texto en la superposición */
+.overlay h5 {
+  margin-bottom: 10px;
+  font-size: 18px; /* Tamaño del título en el overlay */
+}
+
+
+
+/* Espaciado entre imágenes */
+.col-md-3 {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+
+/* Separacion*/
+
+.section-title{
+  padding-top: 8vh;
+  padding-bottom: 15px;
+  
+}
+
+.Event{
+  padding-top: 6vh;
+  padding-bottom: 8vh;
+}
+
+.galery{
+  padding-bottom: 8vh;
+}
+
+/* Publicity Container Styles */
+/* Publicity Container Styles */
+.publicity-container {
+  overflow: hidden; /* Oculta las imágenes que están fuera del contenedor */
+  background-color: #f9f9f9; /* Fondo claro para resaltar las imágenes */
+  border-top: 1px solid #ddd; /* Línea sutil en la parte superior */
+  border-bottom: 1px solid #ddd; /* Línea sutil en la parte inferior */
+  padding: 20px 0; /* Espacio superior e inferior alrededor de las imágenes */
+  
+}
+
+.publicity-track {
+  display: flex; /* Alinea las imágenes en una fila */
+  gap: 20px; /* Espacio entre las imágenes */
+  animation: scroll 20s linear infinite; /* Animación continua */
+  white-space: nowrap; /* Evita el salto de línea */
+}
+
+.publicity-item {
+  display: flex;                /* Utiliza Flexbox para centrar */
+  flex: 0 0 auto; /* No permite que los elementos se redimensionen */
+  max-width: 100px; /* Ancho máximo de cada imagen */
+  justify-content: center;      /* Centra horizontalmente */
+  align-items: center;          /* Centra verticalmente */
+}
+
+
+
+.publicity-img {
+  width: 100%; /* La imagen ocupa todo el ancho del contenedor */
+  height: auto; /* Mantiene la proporción de la imagen */
+  max-width: 100%;              /* Asegura que la imagen no exceda el ancho del div */
+  max-height: 100%;             /* Asegura que la imagen no exceda la altura del div */
+  border-radius: 10px; /* Bordes redondeados para las imágenes */
+  object-fit: contain; /* Asegura que la imagen se ajuste dentro del contenedor sin recortarse ni distorsionarse */
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0); /* Posición inicial */
+  }
+  100% {
+    transform: translateX(-50%); /* Desplazamiento completo hacia la izquierda */
   }
 }

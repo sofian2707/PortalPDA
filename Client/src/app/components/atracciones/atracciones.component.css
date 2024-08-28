@@ -1,0 +1,280 @@
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* ===================== */
+/* Navbar Styles          */
+/* ===================== */
+
+.navbar {
+    background-color: #e9d9c107; /* Fondo translúcido */
+    transition: background-color 0.3s ease; /* Transición suave del fondo */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    position: fixed; /* Navbar fija en la parte superior */
+    top: 0;
+    left: 0;
+    width: 100%; /* Ocupa todo el ancho de la página */
+    z-index: 1000; /* Se asegura de que la navbar esté sobre otros elementos */
+}
+
+.navbar .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Espaciado entre elementos en la navbar */
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center; /* Alinea el logo con el texto */
+}
+
+.navbar-logo {
+    height: 90px; /* Altura del logo */
+    width: auto; /* Mantiene la proporción del logo */
+}
+
+.navbar a {
+    color: #ebd7b9; /* Color del texto */
+    font-weight: bolder; /* Negrita */
+    margin-left: 20px; /* Espacio entre enlaces */
+    font-style: normal;
+    font-size: 15px;
+    font-family: 'Plus Jakarta Sans'; /* Fuente del texto */
+}
+
+.navbar a:hover {
+    color: #f5f6f7; /* Color del texto al pasar el mouse */
+}
+
+/* Estilo de la navbar al hacer scroll */
+.navbar.scrolled {
+    background-color: #e9d9c1d0; /* Color de fondo al hacer scroll */
+}
+
+.navbar.scrolled a:hover {
+    color: #B26E25; /* Color del texto al pasar el mouse después del scroll */
+}
+
+.navbar.scrolled .navbar-logo {
+    height: 60px; /* Tamaño del logo al hacer scroll */
+}
+
+.navbar.scrolled a {
+    color: #2E1F15; /* Color del texto después del scroll */
+}
+
+/* Responsive Adjustments for Navbar */
+@media (max-width: 768px) {
+    .navbar-logo {
+        height: 50px; /* Tamaño del logo en pantallas pequeñas */
+    }
+}
+
+/* ===================== */
+/* Banner Styles          */
+/* ===================== */
+
+.banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.196), rgba(0, 0, 0, 0.5)), url('https://i.postimg.cc/26jpqrpp/14115535-1212891892102653-958141267872794988-o.jpg') center no-repeat;
+    background-size: cover; /* La imagen de fondo cubre todo el banner */
+    height: 90vh; /* Altura del banner */
+    color: #fff;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 100px; /* Espacio superior para ajustar debajo de la navbar */
+    font-family: 'Bw Modelica SS01', sans-serif; /* Fuente del banner */
+    background-attachment: fixed; /* Hace que la imagen del banner quede fija */
+}
+
+.banner h1 {
+    font-size: 4rem; /* Tamaño del título en el banner */
+    font-family: Oswald, sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.1em; 
+}
+
+/* ===================== */
+/* Main Content Styles    */
+/* ===================== */
+
+
+.intro{
+    padding-top: 5vh;
+
+}
+
+.intro h2{
+    padding-bottom: 3vh;
+}
+
+/* Buscador */
+.search-bar input {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    border-radius: 25px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    font-family: 'Plus Jakarta Sans';
+    transition: all 0.3s ease;
+}
+
+.search-bar input:focus {
+    border-color: #B26E25;
+    box-shadow: 0 0 10px rgba(178, 110, 37, 0.2);
+}
+
+/* Filtros */
+/* Filtros */
+/* Contenedor de filtros con scroll horizontal */
+.filters-container {
+    display: flex;
+    overflow-x: auto; /* Habilita el scroll horizontal si es necesario */
+    padding: 10px 0; /* Añade padding para mejorar la apariencia */
+    align-items: center;
+    justify-content: center; /* Alinea los filtros al centro horizontalmente */
+}
+
+/* Contenedor de filtros */
+.filters {
+    display: flex;
+    flex-wrap: nowrap; /* Asegura que los botones no se envuelvan y permanezcan en una fila */
+    gap: 10px; /* Añade espacio entre los botones */
+    align-items: center; /* Alinea los botones verticalmente en el centro */
+    margin: 0; /* Quita el margen del contenedor de filtros */
+    padding: 0; /* Quita el padding del contenedor de filtros */
+    white-space: nowrap; /* Asegura que los botones no se envuelvan */
+}
+
+/* Botones de filtros */
+.filters button {
+    background-color: #B26E25;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+    margin-right: 10px; /* Espacio entre los botones */
+}
+
+/* Hover y active states */
+.filters button:hover {
+    background-color: #92541c;
+    transform: translateY(-2px);
+}
+
+.filters button:active,
+.filters button.active {
+    background-color: #69380f;
+    transform: translateY(0);
+}
+
+/* Diseño responsive para dispositivos móviles */
+@media (max-width: 768px) {
+    .filters button {
+        font-size: 14px; /* Ajusta el tamaño del texto en pantallas más pequeñas */
+        padding: 8px 16px; /* Ajusta el padding en pantallas más pequeñas */
+    }
+}
+
+
+/* Cards de atracciones */
+
+/* General styles for the card */
+.card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 390px; /* Hacer que la card sea menos ancha */
+    height: 300px; /* Hacer que la card sea más alta */
+    position: relative;
+}
+
+/* Hover effect on the card */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.257);
+}
+
+/* Ensure the image fits inside the card */
+.card-img-top {
+    width: 100%;
+    height: 100%; /* Asegura que la imagen cubra toda la altura de la card */
+    object-fit: cover; /* Mantiene la imagen dentro de los límites sin distorsionarse */
+    object-position: bottom; /* Centra la imagen dentro de la tarjeta */
+}
+
+/* Styles for the card body to overlay on the image */
+.card-body {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Fondo oscuro con transparencia */
+    color: white; /* Letras blancas para el contraste */
+    box-sizing: border-box;
+    text-align: center;
+}
+
+
+/* Show the description on hover */
+.card:hover .card-title {
+    font-size: 1.40rem; /* Aumenta el tamaño de la fuente al hacer hover */
+    transform: translateY(-5px); /* Desplaza el título hacia arriba */
+    transition: font-size 0.3s ease, transform 0.3s ease; /* Suaviza la transición */
+}
+
+/* Title is always visible */
+.card-title {
+    font-size: 1.25rem;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    margin-bottom: 10px;
+    color: white;
+    transition: font-size 0.3s ease, transform 0.3s ease; /* Suaviza la transición */
+}
+
+
+/* ===================== */
+/* Footer Styles          */
+/* ===================== */
+
+footer {
+    background-color: #333; /* Fondo oscuro para el footer */
+    color: #fff; /* Texto blanco en el footer */
+    font-family: 'Plus Jakarta Sans'; /* Fuente del footer */
+}
+
+footer a {
+    text-decoration: none; /* Sin subrayado en los enlaces */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .banner h1 {
+        font-size: 2.5rem; /* Tamaño del título del banner en pantallas pequeñas */
+    }
+
+    .banner p {
+        font-size: 1.2rem; /* Tamaño del texto del banner en pantallas pequeñas */
+    }
+
+    #banner {
+        padding-top: 80px; /* Ajuste de padding para pantallas pequeñas */
+        min-height: 60vh; /* Altura mínima del banner en pantallas pequeñas */
+    }
+
+    .navbar {
+        background-color: rgba(255, 255, 255, 0.9); /* Fondo más opaco para legibilidad */
+    }
+
+    .filters {
+        align-items: center;
+    }
+
+}

@@ -1,0 +1,339 @@
+/* ===================== */
+/* Global Styles          */
+/* ===================== */
+
+/* Oculta la barra de desplazamiento en navegadores basados en WebKit */
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* ===================== */
+/* Navbar Styles          */
+/* ===================== */
+
+
+.navbar {
+    background-color: #e9d9c107; /* Fondo translúcido */
+    transition: background-color 0.3s ease; /* Transición suave del fondo */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    position: fixed; /* Navbar fija en la parte superior */
+    top: 0;
+    left: 0;
+    width: 100%; /* Ocupa todo el ancho de la página */
+    z-index: 1000; /* Se asegura de que la navbar esté sobre otros elementos */
+}
+
+.navbar .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Espaciado entre elementos en la navbar */
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center; /* Alinea el logo con el texto */
+}
+
+.navbar-logo {
+    height: 90px; /* Altura del logo */
+    width: auto; /* Mantiene la proporción del logo */
+}
+
+.navbar a {
+    color: #ebd7b9; /* Color del texto */
+    font-weight: bolder; /* Negrita */
+    margin-left: 20px; /* Espacio entre enlaces */
+    font-style: normal;
+    font-size: 15px;
+    font-family: 'Plus Jakarta Sans'; /* Fuente del texto */
+}
+
+.navbar a:hover {
+    color: #f5f6f7; /* Color del texto al pasar el mouse */
+}
+
+/* Estilo de la navbar al hacer scroll */
+.navbar.scrolled {
+    background-color: #e9d9c1d0; /* Color de fondo al hacer scroll */
+}
+
+.navbar.scrolled a:hover {
+    color: #B26E25; /* Color del texto al pasar el mouse después del scroll */
+}
+
+.navbar.scrolled .navbar-logo {
+    height: 60px; /* Tamaño del logo al hacer scroll */
+}
+
+.navbar.scrolled a {
+    color: #2E1F15; /* Color del texto después del scroll */
+}
+
+/* Responsive Adjustments for Navbar */
+@media (max-width: 768px) {
+    .navbar-logo {
+        height: 50px; /* Tamaño del logo en pantallas pequeñas */
+    }
+}
+
+/* ===================== */
+/* Banner Styles          */
+/* ===================== */
+
+.banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.196), rgba(0, 0, 0, 0.5)), url('https://s3.amazonaws.com/arc-wordpress-client-uploads/infobae-wp/wp-content/uploads/2017/03/23151338/iStock-512883946-1024x575.jpg') bottom no-repeat;
+    background-size: cover; /* La imagen de fondo cubre todo el banner */
+    height: 90vh; /* Altura del banner */
+    color: #fff;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 100px; /* Espacio superior para ajustar debajo de la navbar */
+    font-family: 'Bw Modelica SS01', sans-serif; /* Fuente del banner */
+    background-attachment: fixed; /* Hace que la imagen del banner quede fija */
+}
+
+.banner h1 {
+    font-size: 4rem; /* Tamaño del título en el banner */
+    font-family: Oswald, sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.1em; 
+}
+
+
+/* ===================== */
+/* Footer Styles          */
+/* ===================== */
+
+footer {
+    background-color: #333; /* Fondo oscuro para el footer */
+    color: #fff; /* Texto blanco en el footer */
+    font-family: 'Plus Jakarta Sans'; /* Fuente del footer */
+}
+
+footer a {
+    text-decoration: none; /* Sin subrayado en los enlaces */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .banner h1 {
+        font-size: 2.5rem; /* Tamaño del título del banner en pantallas pequeñas */
+    }
+
+    .banner p {
+        font-size: 1.2rem; /* Tamaño del texto del banner en pantallas pequeñas */
+    }
+
+    #banner {
+        padding-top: 80px; /* Ajuste de padding para pantallas pequeñas */
+        min-height: 60vh; /* Altura mínima del banner en pantallas pequeñas */
+    }
+
+    .navbar {
+        background-color: rgba(255, 255, 255, 0.9); /* Fondo más opaco para legibilidad */
+    }
+
+    .filters {
+        align-items: center;
+    }
+
+}
+
+
+/* ===================== */
+/* Map Section Styles    */
+/* ===================== */
+
+
+
+.map {
+    display: flex; /* Usar flexbox */
+    flex-direction: column; /* Colocar los elementos en columna */
+    align-items: center; /* Centrar los elementos horizontalmente */
+    width: 100%;
+    padding: 20px; /* Agregar espacio interno */
+    margin: 0; /* Quita el margen del contenedor */
+    box-sizing: border-box; /* Incluye el padding y el borde en el ancho total */
+    
+}
+
+/* Estilo para el título del mapa */
+.title-map {
+    text-align: center; /* Centra el texto */
+    font-size: 2rem; /* Tamaño de fuente grande */
+    color: #343a40; /* Color del texto */
+    padding-bottom: 10px; /* Espacio debajo del título */
+}
+
+/* Estilo para la descripción del mapa */
+.map-description {
+    text-align: center; /* Centra el texto */
+    font-size: 1rem; /* Tamaño de fuente medio */
+    padding-bottom: 20px; /* Espacio debajo de la descripción */
+    color: #6c757d; /* Color del texto */
+}
+
+.map iframe {
+    width: 100%; /* El iframe ocupa todo el ancho disponible */
+    height: 480px; /* Altura del iframe */
+    border: none; /* Quita el borde del iframe */
+    margin: 0 auto; /* Centra el iframe horizontalmente si es necesario */
+}
+
+
+/*DESTACADOS*/
+/* Sección de Restaurantes Destacados */
+/* Sección de Restaurantes Destacados */
+
+.icono{
+    width: 5%;
+}
+.featured-restaurants .row {
+    align-items: center; /* Alinea verticalmente la estrella y el título */
+}
+
+.featured-restaurants .col-md-4 {
+    display: flex;
+    align-items: center; /* Centra verticalmente la estrella dentro de la columna */
+    padding: 0; /* Elimina el padding adicional de la columna */
+}
+
+.featured-restaurants svg{
+    font-size: 4rem; /* Tamaño grande de la estrella */
+    color: #ffc107; /* Color amarillo dorado */
+    margin-right: 0.5rem; /* Espacio entre la estrella y el título */
+}
+
+.featured-restaurants .col-md-8 {
+    padding-left: 0; /* Elimina el padding izquierdo para que esté pegado a la estrella */
+}
+
+.featured-restaurants h2 {
+    font-size: 2rem; /* Tamaño del título */
+    font-weight: bold;
+    background: linear-gradient(to right, #6f5513, #eecd12); /* Degradado de negro a dorado */
+    -webkit-background-clip: text; /* Aplica el degradado al texto en WebKit */
+    background-clip: text; /* Aplica el degradado al texto, aunque la compatibilidad puede ser limitada */
+    -webkit-text-fill-color: transparent; /* Hace que el texto sea transparente para mostrar el degradado en WebKit */
+    color: transparent; /* Hace que el texto sea transparente en navegadores que no soportan el degradado de texto */
+    margin: 0; /* Elimina el margen alrededor del título */
+    padding-top: 1%; /* Espacio en la parte superior */
+}
+
+
+.featured-restaurants .title-description {
+    font-size: 0.875rem; /* Tamaño de la descripción (pequeño) */
+    color: #666;
+    margin-top: 0.5rem; /* Espacio pequeño arriba de la descripción */
+}
+/* Estilo de las tarjetas (cards) */
+.featured-restaurants .card {
+    border: none;
+    transition: transform 0.3s ease-in-out;
+    width: 100%; /* Asegura que la tarjeta ocupe el ancho completo del contenedor */
+    max-width: 20rem; /* Tamaño máximo para las tarjetas */
+    height: 100%; /* Asegura que la tarjeta ocupe toda la altura disponible en el contenedor */
+    display: flex;
+    flex-direction: column; /* Asegura que la imagen y el contenido se alineen verticalmente */
+    overflow: hidden; /* Oculta cualquier contenido que desborde la tarjeta */
+}
+
+/* Efecto de zoom al pasar el mouse */
+.featured-restaurants .card:hover {
+    transform: scale(1.05); /* Efecto de zoom al pasar el mouse */
+}
+
+/* Estilo de la imagen */
+.featured-restaurants .card img {
+    width: 100%; /* Asegura que la imagen ocupe todo el ancho de la tarjeta */
+    height: 15rem; /* Ajusta la altura de la imagen para mantener un tamaño constante */
+    object-fit: cover; /* Asegura que la imagen cubra el área sin deformarse */
+    border-radius: 15px 15px 0 0; /* Bordes redondeados en la parte superior */
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Efecto de oscurecimiento al hacer hover */
+.featured-restaurants .card img:hover {
+    opacity: 0.8;
+}
+
+/* Estilo del cuerpo de la tarjeta */
+.featured-restaurants .card-body {
+    background-color: #f8f9fa;
+    padding: 15px;
+    text-align: center;
+    flex-grow: 1; /* Permite que el cuerpo de la tarjeta ocupe el espacio restante */
+}
+
+/* Estilo del título de la tarjeta */
+.featured-restaurants .card-title {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin: 0;
+    text-align: center;
+    color: #333;
+}
+/* ===================== */
+/* Responsive Adjustments */
+/* ===================== */
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+    .featured-restaurants .card img {
+        height: 12rem; /* Ajusta la altura de la imagen en pantallas pequeñas */
+    }
+
+    .featured-restaurants .card-title {
+        font-size: 1rem; /* Tamaño del título en pantallas pequeñas */
+    }
+
+    .featured-restaurants .card-body {
+        padding: 10px; /* Ajusta el padding en pantallas pequeñas */
+    }
+
+    /* Ocultar el ícono SVG en pantallas pequeñas */
+    .icono {
+        display: none;
+    }
+}
+
+/* Ajustes para pantallas extra pequeñas (móviles) */
+@media (max-width: 576px) {
+    .featured-restaurants .card {
+        max-width: 100%; /* Asegura que la tarjeta use todo el ancho en pantallas móviles */
+        margin: 0 auto; /* Centra la tarjeta horizontalmente en pantallas móviles */
+    }
+
+    .featured-restaurants .card img {
+        height: 10rem; /* Ajusta la altura de la imagen en pantallas móviles */
+    }
+
+    .featured-restaurants .card-title {
+        font-size: 0.875rem; /* Tamaño del título en pantallas móviles */
+    }
+
+    .featured-restaurants .card-body {
+        padding: 8px; /* Ajusta el padding en pantallas móviles */
+    }
+
+}
+
+/* Ocultar el ícono para pantallas de 1036px o menos */
+@media (max-width: 1036px) {
+    .icono, svg{
+        display: none;
+        width: 0;
+    }
+ 
+
+}
+
+@media (max-width: 1206px) {
+    .featured-restaurants .card {
+        padding: 6px;
+     }
+
+}

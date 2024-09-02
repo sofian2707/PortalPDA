@@ -1,16 +1,18 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { Route, RouterModule } from '@angular/router';
 import *as bootstrap from 'bootstrap';
+import { HostListener } from '@angular/core';
+
 
 @Component({
-  selector: 'app-alojamiento',
+  selector: 'app-noticias',
   standalone: true,
   imports: [RouterLink, RouterOutlet],
-  templateUrl: './alojamiento.component.html',
-  styleUrl: './alojamiento.component.css'
+  templateUrl: './noticias.component.html',
+  styleUrl: './noticias.component.css'
 })
-export class AlojamientoComponent implements OnInit {
+export class NoticiasComponent implements OnInit {
 
   ngOnInit(): void {
     this.onScroll(); // Llama a onScroll en la inicialización si se necesita

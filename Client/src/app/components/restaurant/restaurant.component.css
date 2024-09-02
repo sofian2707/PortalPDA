@@ -1,11 +1,17 @@
+/* ===================== */
+/* Global Styles          */
+/* ===================== */
 
+/* Oculta la barra de desplazamiento en navegadores basados en WebKit */
 ::-webkit-scrollbar {
     display: none;
 }
 
+
 /* ===================== */
 /* Navbar Styles          */
 /* ===================== */
+
 
 .navbar {
     background-color: #e9d9c107; /* Fondo translúcido */
@@ -308,4 +314,21 @@ footer a {
     .featured-restaurants .card-body {
         padding: 8px; /* Ajusta el padding en pantallas móviles */
     }
+}
+
+/* Ocultar el ícono para pantallas de 1036px o menos */
+@media (max-width: 1036px) {
+    .icono, svg{
+        display: none;
+        width: 0;
+    }
+ 
+
+}
+
+@media (max-width: 1206px) {
+    .featured-restaurants .card {
+        padding: 6px;
+     }
+
 }

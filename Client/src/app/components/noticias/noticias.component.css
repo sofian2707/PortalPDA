@@ -1,0 +1,208 @@
+/* ===================== */
+/* Global Styles          */
+/* ===================== */
+
+/* Oculta la barra de desplazamiento en navegadores basados en WebKit */
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* ===================== */
+/* Navbar Styles          */
+/* ===================== */
+
+
+.navbar {
+    background-color: #e9d9c107; /* Fondo translúcido */
+    transition: background-color 0.3s ease; /* Transición suave del fondo */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    position: fixed; /* Navbar fija en la parte superior */
+    top: 0;
+    left: 0;
+    width: 100%; /* Ocupa todo el ancho de la página */
+    z-index: 1000; /* Se asegura de que la navbar esté sobre otros elementos */
+}
+
+.navbar .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Espaciado entre elementos en la navbar */
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center; /* Alinea el logo con el texto */
+}
+
+.navbar-logo {
+    height: 90px; /* Altura del logo */
+    width: auto; /* Mantiene la proporción del logo */
+}
+
+.navbar a {
+    color: #ebd7b9; /* Color del texto */
+    font-weight: bolder; /* Negrita */
+    margin-left: 20px; /* Espacio entre enlaces */
+    font-style: normal;
+    font-size: 15px;
+    font-family: 'Plus Jakarta Sans'; /* Fuente del texto */
+}
+
+.navbar a:hover {
+    color: #f5f6f7; /* Color del texto al pasar el mouse */
+}
+
+/* Estilo de la navbar al hacer scroll */
+.navbar.scrolled {
+    background-color: #e9d9c1d0; /* Color de fondo al hacer scroll */
+}
+
+.navbar.scrolled a:hover {
+    color: #B26E25; /* Color del texto al pasar el mouse después del scroll */
+}
+
+.navbar.scrolled .navbar-logo {
+    height: 60px; /* Tamaño del logo al hacer scroll */
+}
+
+.navbar.scrolled a {
+    color: #2E1F15; /* Color del texto después del scroll */
+}
+
+/* Responsive Adjustments for Navbar */
+@media (max-width: 768px) {
+    .navbar-logo {
+        height: 50px; /* Tamaño del logo en pantallas pequeñas */
+    }
+}
+
+/* ===================== */
+/* Banner Styles          */
+/* ===================== */
+
+.banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.196), rgba(0, 0, 0, 0.5)), url('https://i.postimg.cc/Gttks5Hd/piedra-aguila-neuquen-0322-700x525.jpg') bottom no-repeat;
+    background-size: cover; /* La imagen de fondo cubre todo el banner */
+    height: 50vh; /* Altura del banner */
+    color: #fff;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 100px; /* Espacio superior para ajustar debajo de la navbar */
+    font-family: 'Bw Modelica SS01', sans-serif; /* Fuente del banner */
+    background-attachment: fixed; /* Hace que la imagen del banner quede fija */
+}
+
+.banner h1 {
+    font-size: 4rem; /* Tamaño del título en el banner */
+    font-family: Oswald, sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.1em; 
+}
+
+
+/* ===================== */
+/* Footer Styles          */
+/* ===================== */
+
+footer {
+    background-color: #333; /* Fondo oscuro para el footer */
+    color: #fff; /* Texto blanco en el footer */
+    font-family: 'Plus Jakarta Sans'; /* Fuente del footer */
+}
+
+footer a {
+    text-decoration: none; /* Sin subrayado en los enlaces */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .banner h1 {
+        font-size: 2.5rem; /* Tamaño del título del banner en pantallas pequeñas */
+    }
+
+    .banner p {
+        font-size: 1.2rem; /* Tamaño del texto del banner en pantallas pequeñas */
+    }
+
+    #banner {
+        padding-top: 80px; /* Ajuste de padding para pantallas pequeñas */
+        min-height: 60vh; /* Altura mínima del banner en pantallas pequeñas */
+    }
+
+    .navbar {
+        background-color: rgba(255, 255, 255, 0.9); /* Fondo más opaco para legibilidad */
+    }
+
+    .filters {
+        align-items: center;
+    }
+
+}
+
+
+/* ===================== */
+/* News Section Styles   */
+/* ===================== */
+
+.news-section {
+    background-color: #f8f9fa; /* Fondo claro para la sección de noticias */
+}
+
+.news-card {
+    background-color: #fff; /* Fondo blanco para cada tarjeta de noticia */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    overflow: hidden; /* Oculta el desbordamiento */
+    transition: transform 0.3s ease; /* Transición suave en el hover */
+}
+
+.news-card:hover {
+    transform: translateY(-5px); /* Efecto de elevación al pasar el ratón */
+}
+
+.news-image {
+    width: 100%; /* Imagen cubre todo el ancho de la tarjeta */
+    height: 150px; /* Altura fija para la imagen */
+    object-fit: cover; /* La imagen cubre el área sin distorsionarse */
+}
+
+.news-content {
+    padding: 10px; /* Espacio interno */
+}
+
+.news-title {
+    font-size: 1.25rem; /* Tamaño del título */
+    font-weight: bold; /* Negrita */
+    margin-bottom: 5px; /* Espacio debajo del título */
+}
+
+.news-description {
+    font-size: 0.9rem; /* Tamaño del texto de la descripción */
+    color: #555; /* Color gris para la descripción */
+    margin-bottom: 0; /* Sin margen debajo de la descripción */
+}
+
+
+/* ===================== */
+/* News Filter Styles    */
+/* ===================== */
+
+.btn-filter {
+    background-color: #e9d9c1; /* Color de fondo para los botones de filtro */
+    color: #2e1f15; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 10px 15px; /* Espaciado interno */
+    margin: 5px; /* Espacio entre botones */
+    font-size: 0.9rem; /* Tamaño de fuente */
+    cursor: pointer; /* Cursor en forma de mano al pasar el ratón */
+    transition: background-color 0.3s ease; /* Transición suave del fondo */
+}
+
+.btn-filter.active, .btn-filter:hover {
+    background-color: #b26e25; /* Color de fondo al pasar el ratón o al estar activo */
+    color: #fff; /* Color del texto al pasar el ratón o al estar activo */
+}

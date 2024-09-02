@@ -3,7 +3,7 @@
 <nav class="navbar navbar-expand-lg">
   <div class="container">
     <a class="navbar-brand" href="#">
-      <img src="https://i.postimg.cc/3RsQNJVr/removal-ai-b1447e86-8ecf-4080-862d-9347a4c8824e-piedra-del-aguila.png" alt="Logo" class="navbar-logo">
+      <img routerLink="/home" src="https://i.postimg.cc/3RsQNJVr/removal-ai-b1447e86-8ecf-4080-862d-9347a4c8824e-piedra-del-aguila.png" alt="Logo" class="navbar-logo">
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -23,7 +23,7 @@
           <a class="nav-link" routerLink="/alojamientos">DONDE DORMIR</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/alojamientos">NOTICIAS</a>
+          <a class="nav-link" routerLink="/noticias">NOTICIAS</a>
         </li>
       </ul>
     </div>
@@ -43,7 +43,7 @@
 
 
 
-<section id="services" class="services py-5">
+<section id="services" class="services py-5  ">
   <div class="container">
     <div class="row text-center mb-4">
       <div class="col">
@@ -89,39 +89,18 @@
 </section>
 
 
-
-<section class="events py-5">
-  <div class="Event container">
-    <div class="row">
-      <!-- Description on the Left -->
-      <div class="col-md-6">
-        <h2 class="title mb-4">Próximos Eventos</h2>
-        <p>Te invitamos a participar de los siguientes eventos en Piedra del Águila. Descúbrelos y no te pierdas la oportunidad de disfrutar de nuestras actividades locales.</p>
+ <!-- New Section: Texto Turístico y Imagen -->
+ <section class="text-image-section py-5">
+  <div class="container">
+    <div class="row align-items-center">
+      <!-- Texto Turístico -->
+      <div class="col-md-6 mb-4 mb-md-0">
+        <h2 class="section-title">Explora Piedra del Águila</h2>
+        <p>Sumérgete en la historia y cultura de Piedra del Águila, un lugar lleno de encanto y maravillas naturales. Desde los majestuosos paisajes hasta las tradiciones locales, cada rincón de este lugar tiene una historia que contar. No te pierdas la oportunidad de conocer más sobre esta joya patagónica.</p>
       </div>
-      <!-- Carousel on the Right -->
-      <div class="col-md-6">
-        <div id="eventsCarousel" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active position-relative">
-              <a href="#events">
-                <img src="https://i.postimg.cc/d11JzczS/301995594-399444169014504-378650303075720343-n.jpg" class="d-block w-100" alt="Evento 1">
-                <div class="event-date">20, 21 y 22 de Sep</div> <!-- Fecha del evento -->
-                <div class="carousel-caption">
-                  <h5>Rally Neuquino</h5>
-                </div>
-              </a>
-            </div>
-            <!-- Añadir más eventos aquí -->
-          </div>
-          <a class="carousel-control-prev" href="#eventsCarousel" role="button" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </a>
-          <a class="carousel-control-next" href="#eventsCarousel" role="button" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </a>
-        </div>
+      <!-- Imagen -->
+      <div class="imagencontainer col-md-6">
+        <img src="https://i.postimg.cc/x8VQ4cbZ/141424485-2764793547117075-4875630028044843357-n.jpg" class="img-fluid rounded" alt="Imagen Turística">
       </div>
     </div>
   </div>

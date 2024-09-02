@@ -141,89 +141,7 @@
   padding-top: 100px; /* Espacio superior para el título de la sección */
 }
 
-/* ===================== */
-/* Events Section Styles  */
-/* ===================== */
 
-/* ===================== */
-/* Events Section Styles  */
-/* ===================== */
-
-/* Imagen dentro del carrusel */
-.events .carousel-item img {
-  height: 300px; /* Ajuste de altura para mejor visualización en escritorio */
-  object-fit: cover; /* Las imágenes se ajustan dentro del contenedor */
-  width: 100%; /* Asegura que la imagen ocupe todo el ancho del contenedor */
-  border-radius: 8px; /* Añade bordes redondeados a la imagen */
-}
-
-/* Título del evento con fondo oscuro */
-.events .carousel-caption {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background: rgba(196, 15, 15, 0.6); /* Fondo oscuro semi-transparente */
-  color: white;
-  padding: 10px;
-  border-bottom-left-radius: 8px;
-  border-bottom-right-radius: 8px;
-  z-index: 10;
-  margin: 0;
-}
-
-/* Estilo del div para la fecha */
-.events .event-date {
-  position: absolute;
-  top: 0;
-  right: 0;
-  background: rgba(255, 0, 0, 0.558);
-  color: white;
-  padding: 10px;
-  font-size: 14px;
-  font-weight: bold;
-  z-index: 11;
-  width: 150px;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-top-right-radius: 8px;
-  border-bottom-left-radius: 8px;
-  margin: 0;
-}
-
-/* Responsivo para dispositivos móviles */
-@media (max-width: 768px) {
-  .events .carousel-item img {
-    height: 200px; /* Reducción de altura en pantallas pequeñas */
-  }
-
-  .events .carousel-caption {
-    font-size: 14px; /* Tamaño de fuente reducido para pantallas pequeñas */
-    padding: 8px;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.6); /* Fondo oscuro semi-transparente */
-    border-radius: 0; /* Eliminar bordes redondeados en pantallas pequeñas */
-    z-index: 10;
-  }
-
-  .events .event-date {
-    width: 60px; /* Reducción de tamaño en pantallas pequeñas */
-    height: 60px;
-    font-size: 12px; /* Tamaño de fuente reducido para la fecha en pantallas pequeñas */
-    border-top-right-radius: 8px;
-    border-bottom-left-radius: 8px;
-    margin: 0;
-    padding: 5px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 11;
-  }
-}
 
 
 /* ===================== */
@@ -437,5 +355,88 @@ p.text-left {
   }
   100% {
     transform: translateX(-50%); /* Desplazamiento completo hacia la izquierda */
+  }
+}
+
+
+
+/* ===================== */
+/* Lugar turistico         */
+/* ===================== */
+
+/* Estilo general para la sección */
+.text-image-section {
+  background-color: #f8f9fa; /* Color de fondo suave */
+  padding: 60px 0; /* Espaciado superior e inferior */
+}
+
+/* Contenedor de la fila */
+.text-image-section .row {
+  align-items: center; /* Alinea verticalmente el contenido en la fila */
+}
+
+/* Texto Turístico */
+.text-image-section .col-md-6 {
+  margin-bottom: 1.5rem; /* Espaciado inferior en pantallas grandes */
+}
+
+/* Estilo para el texto */
+.text-image-section .section-title {
+  font-size: 2rem; /* Tamaño de fuente del título */
+  font-weight: 700; /* Negrita */
+  margin-bottom: 1rem; /* Espaciado inferior */
+  color: #343a40; /* Color del texto */
+}
+
+.text-image-section p {
+  font-size: 1rem; /* Tamaño de fuente del párrafo */
+  line-height: 1.6; /* Altura de línea para mejor legibilidad */
+  color: #6c757d; /* Color del texto */
+}
+
+/* Contenedor de la imagen */
+.text-image-section .imagencontainer {
+  display: flex;
+  overflow: hidden; /* Oculta cualquier parte de la imagen que sobresalga del contenedor */
+  width: 50%; /* Contenedor ocupa el 100% del ancho disponible */
+  max-width: 530px; /* Tamaño máximo del contenedor */
+  max-height: 350px;
+  background-color: #fff; /* Fondo blanco para el contenedor de la imagen */
+  margin-left: 6rem; /* Espaciado a la izquierda del contenedor de la imagen */
+}
+
+
+img{
+  background-size: cover; 
+}
+/* Imagen dentro del contenedor */
+.text-image-section .imagencontainer img {
+  width: 100%; /* La imagen se ajusta al ancho del contenedor */
+  height: auto; /* La altura se ajusta para mantener la proporción */
+  object-fit: cover; /* Mantiene la proporción y cubre el contenedor sin distorsionar */
+  position: center;
+  
+}
+
+/* Estilo para el texto y la imagen en pantallas pequeñas */
+@media (max-width: 767.98px) {
+  .text-image-section .row {
+    flex-direction: column; /* Pone el texto y la imagen en una columna en pantallas pequeñas */
+    text-align: center; /* Alinear texto e imagen al centro */
+  }
+
+  .text-image-section .col-md-6 {
+    margin-bottom: 1.5rem; /* Espaciado inferior en pantallas pequeñas */
+  }
+
+  .text-image-section .imagencontainer {
+    max-width: 100%; /* Tamaño máximo del contenedor en pantallas pequeñas */
+    margin-left: 0; /* Quita el espaciado a la izquierda en pantallas pequeñas */
+    width: auto; /* Ajuste automático en pantallas pequeñas */
+  }
+
+  .text-image-section .imagencontainer img {
+    width: 100%; /* Imagen ocupa el ancho completo del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
   }
 }

@@ -6,6 +6,7 @@ import { AtraccionesComponent } from './components/atracciones/atracciones.compo
 import { RestaurantComponent } from './components/restaurant/restaurant.component';
 import { NoticiasComponent } from './components/noticias/noticias.component';
 import { AdminComponent } from './components/admin/admin.component';
+import { SeePlaceComponent } from './components/see-place/see-place.component';
 
 export const routes: Routes = [
     { path: '', component: HomeComponent },
@@ -14,7 +15,8 @@ export const routes: Routes = [
     { path: 'atracciones', component: AtraccionesComponent}, // Ruta para el componente Home
     { path: 'restaurantes', component: RestaurantComponent},
     { path: 'noticias', component: NoticiasComponent},
-    { path: 'admin-portalpda', component: AdminComponent}
+    { path: 'admin-portalpda', component: AdminComponent},
+    {path: 'see-place', component: SeePlaceComponent}
     // Otras rutas aquí
 ];
 

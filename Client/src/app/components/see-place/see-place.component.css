@@ -1,0 +1,224 @@
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+/* ===================== */
+/* Navbar Styles          */
+/* ===================== */
+
+.navbar {
+    background-color: #e9d9c107; /* Fondo translúcido */
+    transition: background-color 0.3s ease; /* Transición suave del fondo */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    position: fixed; /* Navbar fija en la parte superior */
+    top: 0;
+    left: 0;
+    width: 100%; /* Ocupa todo el ancho de la página */
+    z-index: 1000; /* Se asegura de que la navbar esté sobre otros elementos */
+}
+
+.navbar .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Espaciado entre elementos en la navbar */
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center; /* Alinea el logo con el texto */
+}
+
+.navbar-logo {
+    height: 90px; /* Altura del logo */
+    width: auto; /* Mantiene la proporción del logo */
+}
+
+.navbar a {
+    color: #ebd7b9; /* Color del texto */
+    font-weight: bolder; /* Negrita */
+    margin-left: 20px; /* Espacio entre enlaces */
+    font-style: normal;
+    font-size: 15px;
+}
+
+.navbar a:hover {
+    color: #f5f6f7; /* Color del texto al pasar el mouse */
+}
+
+/* Estilo de la navbar al hacer scroll */
+.navbar.scrolled {
+    background-color: #e9d9c1d0; /* Color de fondo al hacer scroll */
+}
+
+.navbar.scrolled a:hover {
+    color: #B26E25; /* Color del texto al pasar el mouse después del scroll */
+}
+
+.navbar.scrolled .navbar-logo {
+    height: 60px; /* Tamaño del logo al hacer scroll */
+}
+
+.navbar.scrolled a {
+    color: #2E1F15; /* Color del texto después del scroll */
+}
+
+
+
+/* ===================== */
+/* Banner Styles          */
+/* ===================== */
+
+.banner {
+    background-image: url(https://i.postimg.cc/TwrMpnp4/582.jpg);
+    background-size: cover; /* La imagen de fondo cubre todo el banner */
+    background-position: center 80%;
+    height: 40vh; /* Altura del banner */
+    color: #fff;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 100px; /* Espacio superior para ajustar debajo de la navbar */
+    background-attachment: fixed; /* Hace que la imagen del banner quede fija */
+}
+
+.banner h1 {
+    font-size: 4rem; /* Tamaño del título en el banner */
+    font-family: Oswald, sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.1em; 
+    padding-bottom: 5%;
+}
+
+
+
+/* Responsive Adjustments for Navbar */
+@media (max-width: 768px) {
+    .navbar-logo {
+        height: 50px; /* Tamaño del logo en pantallas pequeñas */
+    }
+}
+
+
+/* ===================== */
+/* Footer Styles          */
+/* ===================== */
+
+footer {
+    background-color: #333; /* Fondo oscuro para el footer */
+    color: #fff; /* Texto blanco en el footer */
+    font-family: 'Plus Jakarta Sans'; /* Fuente del footer */
+}
+
+footer a {
+    text-decoration: none; /* Sin subrayado en los enlaces */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .banner h1 {
+        font-size: 2.5rem; /* Tamaño del título del banner en pantallas pequeñas */
+    }
+
+    .banner p {
+        font-size: 1.2rem; /* Tamaño del texto del banner en pantallas pequeñas */
+    }
+
+    #banner {
+        padding-top: 80px; /* Ajuste de padding para pantallas pequeñas */
+        min-height: 60vh; /* Altura mínima del banner en pantallas pequeñas */
+    }
+
+    .navbar {
+        background-color: rgba(255, 255, 255, 0.9); /* Fondo más opaco para legibilidad */
+    }
+
+    .filters {
+        align-items: center;
+    }
+
+}
+
+.title-place{
+    font-weight: 600;
+    font-size: 2rem;
+    padding-bottom: 1%;
+}
+
+.carousel-inner img {
+    border-radius: 10px; /* Bordes redondeados */
+    object-fit: cover; /* Ajusta la imagen para que llene completamente el espacio */
+    width: 100%; /* Asegura que ocupe todo el ancho del contenedor */
+    height: 400px; /* Altura fija para todas las imágenes */
+  }
+  
+
+ 
+  
+  .activities h2 {
+    padding-top: 5%;
+    color: #333;
+    font-size: 1.5rem; /* Tamaño más compacto */
+  }
+  
+  .activity-item {
+    text-align: center;
+    width: 80px; /* Tamaño compacto para cada actividad */
+  }
+  
+  .activity-item i {
+    font-size: 30px; /* Tamaño reducido del ícono */
+    color: rgb(75, 75, 75); /* Color de íconos */
+  }
+  
+  .activity-item p {
+    font-size: 14px; /* Texto compacto */
+    color: #333;
+    margin: 0;
+  }
+  
+
+  /* Estilo del botón */
+.btn-long {
+    display: inline-block;
+    background-color: #a8d5fe; /* Gris oscuro */
+    color: rgb(75, 75, 75); /* Texto blanco */
+    text-decoration: none; /* Sin subrayado */
+    padding: 10px 20px; /* Espaciado interno (menos alto) */
+    font-size: 18px; /* Tamaño del texto */
+    font-weight: bold; /* Negrita */
+    border-radius: 8px; /* Bordes redondeados */
+    text-transform: uppercase; /* Texto en mayúsculas */
+    letter-spacing: 1px; /* Espaciado entre letras */
+    position: relative; /* Posicionamiento relativo */
+    overflow: hidden; /* Oculta animación fuera del botón */
+    transition: all 0.3s ease; /* Transición suave */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    width: 100%; /* Ocupar todo el ancho del contenedor */
+    text-align: center; /* Centrado del texto */
+    max-width: 100%; /* Asegura que no tenga ancho fijo */
+  }
+  
+  /* Icono del vehículo */
+  .btn-long .icon {
+    margin-left: 10px; /* Espacio entre texto e ícono */
+    display: inline-block;
+    transition: transform 0.3s ease; /* Movimiento suave */
+  }
+  
+  /* Hover: animación del ícono */
+  .btn-long:hover .icon {
+    transform: translateX(10px); /* Mueve el ícono a la derecha */
+  }
+  
+  /* Hover: fondo y efecto del botón */
+  .btn-long:hover {
+    background-color: #687680; /* Gris más oscuro al pasar el mouse */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+    color: white
+  }
+  

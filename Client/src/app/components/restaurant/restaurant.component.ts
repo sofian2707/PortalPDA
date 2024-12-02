@@ -6,7 +6,7 @@ import *as bootstrap from 'bootstrap';
 @Component({
   selector: 'app-restaurant',
   standalone: true,
-  imports: [RouterLink, RouterOutlet],
+  imports: [RouterLink],
   templateUrl: './restaurant.component.html',
   styleUrl: './restaurant.component.css'
 })

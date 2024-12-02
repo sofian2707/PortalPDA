@@ -440,3 +440,88 @@ img{
     height: auto; /* Mantiene la proporción de la imagen */
   }
 }
+
+
+
+/* ===================== */
+/* Media queries         */
+/* ===================== */
+
+@media only screen and (max-width: 575.98px) {
+  /* Estilos para teléfonos pequeños */
+  .navbar-logo {
+    height: 40px; /* Reducir tamaño del logo */
+  }
+
+  .banner h1 {
+    font-size: 2rem; /* Reducir el tamaño del título */
+  }
+
+  .banner p {
+    font-size: 1rem; /* Reducir el tamaño del texto */
+  }
+
+  .text-image-section .imagencontainer {
+    margin-left: 0; /* Eliminar margen izquierdo */
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {
+  .navbar-logo {
+    height: 50px; /* Ajustar el tamaño del logo */
+  }
+
+  .banner h1 {
+    font-size: 2.5rem; /* Ajustar el tamaño del título */
+  }
+
+  .banner p {
+    font-size: 1.2rem; /* Ajustar el tamaño del texto */
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+  .navbar-logo {
+    height: 60px; /* Ajustar el tamaño del logo */
+  }
+
+  .banner h1 {
+    font-size: 3rem; /* Ajustar el tamaño del título */
+  }
+
+  .banner p {
+    font-size: 1.4rem; /* Ajustar el tamaño del texto */
+  }
+
+  .text-image-section .imagencontainer {
+    margin-left: 3rem; /* Ajustar el margen izquierdo */
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199.98px) {
+  .navbar-logo {
+    height: 70px; /* Ajustar el tamaño del logo */
+  }
+
+  .banner h1 {
+    font-size: 3.5rem; /* Ajustar el tamaño del título */
+  }
+
+  .banner p {
+    font-size: 1.6rem; /* Ajustar el tamaño del texto */
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .navbar-logo {
+    height: 90px; /* Restablecer tamaño del logo */
+  }
+
+  .banner h1 {
+    font-size: 4rem; /* Restablecer tamaño del título */
+  }
+
+  .banner p {
+    font-size: 1.5rem; /* Restablecer tamaño del texto */
+  }
+
+  .text-image-section .imagencontainer {
+    margin-left: 6rem; /* Restablecer margen izquierdo */
+  }
+}
